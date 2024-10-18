@@ -17,29 +17,37 @@ Foy is a custom JavaScript runtime built using the [V8 JavaScript engine](https:
 - C++17 compatible compiler
 - [V8](https://v8.dev/docs/build) JavaScript engine and [libuv](https://libuv.org/)
 
+### Cloning the Repository
+
+Since the project uses submodules (for V8 and libuv), you need to clone the repository with its submodules using the following command:
+
+```bash
+git clone --recurse-submodules https://github.com/mertcanaltin/foy.git
+cd foy
+```
+
+If you've already cloned the repository without submodules, you can initialize and update them with:
+
+```bash
+git submodule update --init --recursive
+```
+
 ### Building the Project
 
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/mertcanaltin/foy.git
-   cd foy
-   ```
-
-2. Configure the build:
+1. Configure the build:
 
    ```bash
    mkdir build && cd build
    cmake ..
    ```
 
-3. Build the project:
+2. Build the project:
 
    ```bash
    make
    ```
 
-4. Run a JavaScript file:
+3. Run a JavaScript file:
 
    ```bash
    ./foy your-script.js
