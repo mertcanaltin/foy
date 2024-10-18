@@ -1,0 +1,3 @@
+/Users/mert/Desktop/foy/my-runtime/build/CMakeFiles/my_runtime.dir
+/Users/mert/Desktop/foy/my-runtime/build/CMakeFiles/edit_cache.dir
+/Users/mert/Desktop/foy/my-runtime/build/CMakeFiles/rebuild_cache.dir
