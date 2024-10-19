@@ -10,8 +10,17 @@ void OnTimeout(uv_timer_t* handle) {
     std::cout << "Timer triggered!" << std::endl;
 }
 
-// Function to read JavaScript file
+/**
+ * Function to read a JavaScript file and return its content as a string.
+ * @param filepath Path to the JavaScript file. Only `.js` file is supported.
+ * @return Content of the JavaScript file.
+ */
 std::string ReadJSFile(const std::string& filepath) {
+    if (filepath.substr(filepath.find_last_of(".") + 1) != "js") {
+        std::cerr << "Invalid file type. Only .js file is supported." << std::endl;
+        exit(1);
+    }
+
     std::ifstream file(filepath);
     if (!file.is_open()) {
         std::cerr << "Failed to open file: " << filepath << std::endl;
